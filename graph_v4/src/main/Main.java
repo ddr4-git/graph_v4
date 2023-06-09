@@ -26,7 +26,7 @@ public class Main {
 		graph.printGraph();
 		*/
 		
-		new Frame();
+		MainFrame mainFrame = new MainFrame();
 	}
 
 }
