@@ -29,7 +29,13 @@ public class MainFrame implements ActionListener{
 		
 		createButton.setBackground(new Color(255,250,250));
 		loadButton.setBackground(new Color(250,250,255));
+			
 		
+		//Panels
+		
+		
+		
+		//
 		
 		
 		//Action Listener

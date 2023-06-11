@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -18,7 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.RootPaneContainer;
 import javax.swing.border.Border;
 import java.awt.MenuBar;
-
+import java.awt.Window;
 import java.awt.MenuBar;
 public class Frame extends JFrame implements MouseListener{
 
@@ -28,6 +29,8 @@ public class Frame extends JFrame implements MouseListener{
 	
 	public Frame()
 	{
+		
+		//Buttons
 		
 		vertexButton = new JButton("Vertex");
 		edgeButton = new JButton("Edge");
@@ -39,35 +42,35 @@ public class Frame extends JFrame implements MouseListener{
 		edgeButton.setFocusable(false);
 		
 		
+		//End buttons
+		
+		
+		//panels
 		JPanel panel = new JPanel();
-		JPanel graphPanel = new JPanel();
+		GraphPanel graphPanel = new GraphPanel();
 		
 		
-		
+	
 		
 		panel.setBackground(new Color(255,210,210));
-		graphPanel.setBackground(new Color(255,255,255));
 		
 		panel.setPreferredSize(new Dimension(100,60));
 		
 
-				
+
 		panel.setLayout(new GridLayout());
 		panel.add(vertexButton);
 		panel.add(edgeButton);
+		//panel.add(graphPanel);
 		
-
 		
-		CirclePanel cpanel = new CirclePanel();
-		graphPanel.add(cpanel);
-		cpanel.addMouseListener(new CircleClickListener(cpanel));
+		//end Panels
+		
 		
 		//this.setSize(700,700);
 		//this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		//this.setLayout(null);
-	
-		this.addMouseListener(this);
-		
+
 		
 		/*Flow Layout
 		JPanel panel = new JPanel();
@@ -150,12 +153,7 @@ public class Frame extends JFrame implements MouseListener{
 		*/
 	}
 	
-	private void printMessage()
-	{
-		System.out.println("Hello World");
-		//label.setVisible(true);
-	}
-	
+
 	@Override
 	public void mouseClicked(MouseEvent e) {
 	

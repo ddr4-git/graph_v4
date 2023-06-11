@@ -19,7 +19,7 @@ public class CircleClickListener extends MouseAdapter {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		panel.addCircle(new Circle(new Vertex(), e.getX() - 12, e.getY() - 12, 26, Color.CYAN));
+		panel.addCircle(new Circle(new Vertex(), e.getX() - 12, e.getY() - 12, 26, Color.BLACK));
 	}
 
 }
